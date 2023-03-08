@@ -1,0 +1,36 @@
+.bg-image-vertical {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+    }
+
+    /* image du login */
+.login {
+    object-fit: cover;
+    object-position: left
+
+}
+
+.login-form{
+    color: #709085;
+}
+
+/*  start register form */
+
+.back-image{
+    background-image: url(../laboratoir/imag/shot-health.jpg);
+}
+
+.card-image{
+    border-radius: 15px;
+}
+
+
+/* pour login responsive */
+    @media (min-width: 1025px) {
+    .h-custom-2 {
+    height: 100%;
+    }
+    }

@@ -1,0 +1,9 @@
+package com.mon.espace.medical.repository;
+
+import com.mon.espace.medical.models.Patient;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface PatientRepository extends JpaRepository<Patient, Long> {
+}
