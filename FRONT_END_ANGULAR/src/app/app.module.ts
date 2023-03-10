@@ -8,6 +8,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { PatientComponent } from './components/patient/patient.component';
+// import { DashboardComponent } from './modules/component/dashboard/dashboard.component';
+
 
 @NgModule({
   declarations: [
@@ -15,12 +19,15 @@ import { RegisterComponent } from './components/auth/register/register.component
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    PatientComponent,
+    // DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule // pour le formulaire reactif
   ],
   providers: [],
   bootstrap: [AppComponent]
