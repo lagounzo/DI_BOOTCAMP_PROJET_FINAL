@@ -1,3 +1,6 @@
+import { NgDompurifySanitizer } from "@tinkoff/ng-dompurify";
+import { TuiRootModule, TuiDialogModule, TuiAlertModule, TUI_SANITIZER } from "@taiga-ui/core";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,6 +13,15 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PatientComponent } from './components/patient/patient.component';
+import { PrescriptionComponent } from './components/patient/prescription/prescription.component';
+import { PlayoutComponent } from './components/patient/playout/playout.component';
+import { SidebarComponent } from './components/patient/sidebar/sidebar.component';
+import { MaladieComponent } from './components/patient/maladie/maladie.component';
+import { ConsultationComponent } from './components/patient/consultation/consultation.component';
+import { ProfilMedicalComponent } from './components/patient/profil-medical/profil-medical.component';
+import { InformationPersonnelleComponent } from './components/patient/information-personnelle/information-personnelle.component';
+import { AllergieComponent } from './components/patient/allergie/allergie.component';
+import { AntecedentComponent } from './components/patient/antecedent/antecedent.component';
 // import { DashboardComponent } from './modules/component/dashboard/dashboard.component';
 
 
@@ -21,15 +33,28 @@ import { PatientComponent } from './components/patient/patient.component';
     LoginComponent,
     RegisterComponent,
     PatientComponent,
+    PrescriptionComponent,
+    PlayoutComponent,
+    SidebarComponent,
+    MaladieComponent,
+    ConsultationComponent,
+    ProfilMedicalComponent,
+    InformationPersonnelleComponent,
+    AllergieComponent,
+    AntecedentComponent,
     // DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    ReactiveFormsModule // pour le formulaire reactif
-  ],
-  providers: [],
+    ReactiveFormsModule, // pour le formulaire reactif
+      BrowserAnimationsModule,
+      TuiRootModule,
+      TuiDialogModule,
+      TuiAlertModule
+],
+  providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

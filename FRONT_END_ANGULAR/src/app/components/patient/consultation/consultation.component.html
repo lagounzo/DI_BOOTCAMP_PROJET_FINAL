@@ -1,0 +1,51 @@
+<p>consultation works!</p>
+
+
+  <!--  modale -->
+
+  <ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <p>Hello, World!</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+    </div>
+  </ng-template>
+
+  <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+
+  <!--  tableau consultation -->
+  <table class="table table-success table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Jour</th>
+        <th scope="col">Hopital</th>
+        <th scope="col">Medecin</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2" >Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>   <!--  tableau consultation -->
+

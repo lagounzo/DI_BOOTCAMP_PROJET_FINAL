@@ -4,6 +4,14 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 
 const routes: Routes = [
+
+ //charger dans la memoire du navigateur le module a la demande
+
+ {
+  path:"admin", loadChildren: () => import ('./modules/public/public.module')
+    .then (page => page.PublicModule)
+},
+
   // route du login
   {
     path:"", component: LoginComponent
