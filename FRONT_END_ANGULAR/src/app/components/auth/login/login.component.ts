@@ -24,11 +24,12 @@ export class LoginComponent implements OnInit{
   }
 // la fontion retourne l'alert d'envoie
   logIn(){
-    // if(this.login.invalid){
-    //   alert("Error");
-    // }else{
-    //   alert("Succes");
-    // }
+    if(this.login.invalid){
+      alert("Error");
+    }else{
+      alert("Succes");
+    }
+    // console.log(this.login)
   }
   //resgter
 

@@ -16,7 +16,9 @@
         </div>
 
         <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+
 <!-- formGroup permet d'appeler d'interagir avec le typscrip -->
+
           <form [formGroup]="login" style="width: 23rem;" (ngSubmit)="logIn()">
 
             <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
@@ -32,12 +34,12 @@
             </div>
 
             <div class="pt-1 mb-1">
-              <button class="btn btn-info btn-lg btn-block" type="submit">Login</button>
+              <button class="btn btn-info btn-lg btn-block"  type="submit">Login</button>
             </div>
 
             <p class="small mb-1 pb-lg-1"><a class="text-muted" href="#!">mot de passe oublié ?</a></p>
             <!-- route du register -->
-            <p>Don't have an account? <a routerLink="/register" class="link-info" (click)="register()">S'inscrire ici</a></p>
+            <p>Don't have an account? <a routerLink="/register" class="link-info" >S'inscrire ici</a></p>
 
           </form>
 

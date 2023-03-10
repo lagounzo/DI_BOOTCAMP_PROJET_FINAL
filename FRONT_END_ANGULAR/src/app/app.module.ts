@@ -22,6 +22,7 @@ import { ProfilMedicalComponent } from './components/patient/profil-medical/prof
 import { InformationPersonnelleComponent } from './components/patient/information-personnelle/information-personnelle.component';
 import { AllergieComponent } from './components/patient/allergie/allergie.component';
 import { AntecedentComponent } from './components/patient/antecedent/antecedent.component';
+import { HttpClientJsonpModule, HttpClientModule } from "@angular/common/http";
 // import { DashboardComponent } from './modules/component/dashboard/dashboard.component';
 
 
@@ -52,7 +53,8 @@ import { AntecedentComponent } from './components/patient/antecedent/antecedent.
       BrowserAnimationsModule,
       TuiRootModule,
       TuiDialogModule,
-      TuiAlertModule
+      TuiAlertModule,
+      HttpClientModule // impoter pour l api
 ],
   providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}],
   bootstrap: [AppComponent]

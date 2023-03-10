@@ -8,25 +8,29 @@
                       <div class="card-body p-2">
                           <h2 class="text-uppercase text-center mb-1">Creer un compte</h2>
 
-                          <form  [formGroup]="enregistrer"> <!--  form start-->
-
+                          <!--  form start-->
+                          <form  [formGroup]="enregistrer" (ngSubmit)="signUp()">
+                            <!-- // formControlName pour les control -->
+                              <div class="form-outline mb-1">
+                                <label class="form-label"  for="form3Example1cg">Nom</label>
+                                  <input formControlName="last_name" type="text" id="form3Example1cg" class="form-control form-control-sm" />
+                              </div>
 
                               <div class="form-outline mb-1">
-                                <label class="form-label" for="form3Example1cg">votre nom</label>
-                                  <input type="text" id="form3Example1cg" class="form-control form-control-sm" />
+                                <label class="form-label" for="form3Example1cg">Prenom</label>
+                                  <input formControlName="first_name" type="text" id="form3Example1cg" class="form-control form-control-sm" />
                               </div>
 
                               <div class="form-outline mb-1">
                                 <label class="form-label" for="form3Example3cg">Votre email</label>
 
-                                  <input type="email" id="form3Example3cg" class="form-control form-control-sm" />
+                                  <input formControlName="email" type="email" id="form3Example3cg" class="form-control form-control-sm" />
                               </div>
 
                               <div class="form-outline mb-4">
                                 <label class="form-label" for="form3Example4cg">Password</label>
 
-                                  <input type="password" id="form3Example4cg"
-                                      class="form-control form-control-sm" />
+                                  <input formControlName="password" type="password" id="form3Example4cg" class="form-control form-control-sm" />
                               </div>
 
                               <div class="form-outline mb-4">
@@ -47,7 +51,7 @@
 
                               <div class="d-flex justify-content-center">
                                 <!-- enregistrer -->
-                                  <button type="submit" routerLink ="enregistrer" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" >Enregistrer</button>
+                                  <button type="submit" routerLink ="/register"  class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" >Enregistrer</button>
                               </div>
 
                               <p class="text-center text-muted mt-3 mb-0">Avez vous deja un compte ? <a href="#!"
