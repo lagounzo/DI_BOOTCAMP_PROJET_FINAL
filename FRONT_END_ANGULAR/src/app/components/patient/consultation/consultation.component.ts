@@ -18,7 +18,7 @@ export class ConsultationComponent {
 	}
 
 	open(content:any) {
-		this.modalService.open(content , { size: 'xl' }); // pour le modal
+		this.modalService.open(content , { size: 'l' }); // pour le modal
 	}
 
 }

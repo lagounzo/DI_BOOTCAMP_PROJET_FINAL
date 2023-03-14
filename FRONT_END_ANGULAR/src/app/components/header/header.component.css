@@ -26,12 +26,14 @@
   color: white;
 }
 
-.navbar
+.navbar_cl
 {
   background-color: #e3f2fd;
+  color: black;
 }
 
 .colp
 {
   margin-left: 200px;
 }
+

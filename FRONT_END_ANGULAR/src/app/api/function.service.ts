@@ -27,6 +27,10 @@ export class FunctionService {
     return this.httpService.delete(`commtUsers ${id}`);
   }
 
+  getCommune() {
+    return this.httpService.get('communes');
+  }
+
 
 
 }

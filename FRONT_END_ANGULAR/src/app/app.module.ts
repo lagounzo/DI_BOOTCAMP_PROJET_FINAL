@@ -15,8 +15,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PatientComponent } from './components/patient/patient.component';
 import { PrescriptionComponent } from './components/patient/prescription/prescription.component';
 import { PlayoutComponent } from './components/patient/playout/playout.component';
-import { SidebarComponent } from './components/patient/sidebar/sidebar.component';
-import { MaladieComponent } from './components/patient/maladie/maladie.component';
 import { ConsultationComponent } from './components/patient/consultation/consultation.component';
 import { ProfilMedicalComponent } from './components/patient/profil-medical/profil-medical.component';
 import { InformationPersonnelleComponent } from './components/patient/information-personnelle/information-personnelle.component';
@@ -26,6 +24,8 @@ import { HttpClientJsonpModule, HttpClientModule } from "@angular/common/http";
 import { VaccinationComponent } from './components/patient/vaccination/vaccination.component';
 import { ConstanteComponent } from './components/patient/constante/constante.component';
 import { AjouterComponent } from './components/medecin/ajouter/ajouter.component';
+import { HomeComponent } from './components/home/home.component';
+import { SpecialiteComponent } from './components/specialite/specialite.component';
 // import { DashboardComponent } from './modules/component/dashboard/dashboard.component';
 
 
@@ -39,8 +39,6 @@ import { AjouterComponent } from './components/medecin/ajouter/ajouter.component
     PatientComponent,
     PrescriptionComponent,
     PlayoutComponent,
-    SidebarComponent,
-    MaladieComponent,
     ConsultationComponent,
     ProfilMedicalComponent,
     InformationPersonnelleComponent,
@@ -49,6 +47,8 @@ import { AjouterComponent } from './components/medecin/ajouter/ajouter.component
     VaccinationComponent,
     ConstanteComponent,
     AjouterComponent,
+    HomeComponent,
+    SpecialiteComponent,
     // DashboardComponent
   ],
   imports: [
