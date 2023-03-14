@@ -1,11 +1,15 @@
 <div class="navba-container">
-  <div class="defilement">
-    <p>Bienvenue dans votre espace medical</p>
+
+  <div class="defilement" >
+
+    <marquee>Bienvenue dans votre espace medical</marquee>
+    <!-- <marquee [direction]="up">votre santé est notre priorité</marquee> pour defilement du texte du haut vers le bas-->
+
   </div>
   <!-- and slide -->
 
   <!-- ********************** -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #e3f2fd;">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" >
     <div class="container-fluid">
       <!-- <img src="assets\images\logo.jpg" alt="" srcset="" class ="logo"> -->
       <a class="navbar-brand" href="#">MON ESPACE MEDICAL</a>
@@ -14,24 +18,34 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 200px;">
+      <div class="collapse navbar-collapse colp" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
           <li class="nav-item">
             <!-- taiga button -->
             <a tuiButton appearance="custom" type="button" size="s" class=" btn btn-outline-secondary "
-              href="#description">Description</a>
+              href="#description">Accueil</a>
             <!-- fin taiga button -->
-            <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+            <!-- <a class="nav-link active" aria-current="page" href="#">Accueil</a> -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Spécialité</a>
+            <!-- taiga button -->
+            <a tuiButton appearance="custom" type="button" size="s" class=" btn btn-outline-secondary "
+              href="#description">Spécialité</a>
+            <!-- <a class="nav-link" href="#">Spécialité</a> -->
+
           </li>
           <li class="nav-item">
+            <!-- taiga button -->
+            <!-- <a tuiButton appearance="custom" type="button" size="s" class=" btn btn-outline-secondary "
+              href="#description">Profil Parient</a> -->
             <a class="nav-link" routerLink="/admin">Profil Parient</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link ">Contactez-nous</a>
+                        <!-- taiga button -->
+            <a tuiButton appearance="custom" type="button" size="s" class=" btn btn-outline-secondary "
+            href="#description">Contactez-nous</a>
+            <!-- <a class="nav-link ">Contactez-nous</a> -->
           </li>
         </ul>
         <form class="d-flex" role="search">

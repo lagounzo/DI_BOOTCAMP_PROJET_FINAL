@@ -8,6 +8,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -31,6 +32,11 @@ public class Hopital implements Serializable {
     private String address;
     private Date createdat;
     private Date updatedat;
+
+
+    @OneToMany(mappedBy = "hopital")
+    private List<HopitalSpeciality> hopitalSpecialityList;
+
 
 
 }

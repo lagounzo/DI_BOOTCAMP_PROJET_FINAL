@@ -1,51 +1,113 @@
 <p>consultation works!</p>
 
 
-  <!--  modale -->
+<!--  modale -->
 
-  <ng-template #content let-c="close" let-d="dismiss">
-    <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
-      <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
-    </div>
-    <div class="modal-body">
-      <p>Hello, World!</p>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
-    </div>
-  </ng-template>
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Demande de consultation</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+  </div>
+  <!-- zone de text  -->
+  <div class="row-mt-2">
 
-  <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
 
-  <!--  tableau consultation -->
-  <table class="table table-success table-striped">
-    <thead>
-      <tr>
-        <th scope="col">Jour</th>
-        <th scope="col">Hopital</th>
-        <th scope="col">Medecin</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2" >Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>   <!--  tableau consultation -->
+    <!-- liste deroulante -->
+    <div class="container">
+      <form class="row g-3">
 
+        <div class="row-mt-2">
+          <div class="col-md-12">
+            <label for="inputEmail4" class="form-label">Nom de la maladie</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Ex: Drépanocytose">
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md-12">
+            <label for="inputPassword4" class="form-label">Hopital</label>
+            <select class="form-select form-select-mb " aria-label=".form-select-sm example">
+              <option selected>-Choix---</option>
+              <option value="1">santé absolue</option>
+              <option value="2">recovery</option>
+              <option value="3">ngouhan</option>
+
+            </select>
+            <label for="inputPassword4" class="form-label">Spécialité</label>
+            <select class="form-select form-select-mb " aria-label=".form-select-sm example" >
+              <option selected>-Choix---</option>
+              <option value="1">Généraliste</option>
+              <option value="2">Dermatologie et vénérologie</option>
+              <option value="3">Allergologie</option>
+              <option value="4">L’anesthésiologie</option>
+              <option value="5">L’andrologie</option>
+              <option value="6">cardiologie</option>
+              <option value="7">dermatologie</option>
+              <option value="8">endocrinologie</option>
+              <option value="9">gastro-entérologie</option>
+              <option value="10">gynécologie</option>
+              <option value="11">hématologie</option>
+              <option value="12">hépatologie</option>
+              <option value="13">infectiologie</option>
+              <option value="14">neurologie</option>
+              <option value="15">odontologie</option>
+              <option value="16">ophtalmologie</option>
+              <option value="17">orthopédie</option>
+              <option value="18">pédiatrie</option>
+              <option value="19">pneumologie</option>
+              <option value="20">rhumatologie</option>
+              <option value="20">urologie</option>
+            </select>
+          </div>
+        </div>
+        <!-- fin zone de text  -->
+        <div class="row-mt-4">
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Motif de consultation</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        </div> <!-- fin liste deroulante -->
+
+        <!-- <div class="col-12">
+            <button type="submit" class="btn btn-primary">valider</button>
+          </div> -->
+      </form>
+    </div> <!-- fin div contenue dashboard-->
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">envoyer</button>
+  </div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Nouvelle Consultation</button>
+
+<!--  tableau consultation -->
+<!-- <table class="table table-success table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Jour</th>
+      <th scope="col">Hopital</th>
+      <th scope="col">Medecin</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>  tableau consultation -->

@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -13,17 +14,18 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "commune")
+
+@Table(name = "communes")
 public class Commune {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id_consultation;
+    private long id_commune;
 
     @Column(name = "nameDistrict" , length = 128)
     private String disrict_name ;
 
-    @Column(name = "area" , length = 128 )
-    private String  area;
+   /* @Column(name = "area" , length = 128 )
+    private String  area;*/
     @Column(name = "homeAddress" , length = 128 )
     private String  home_address;
     /*@Column(name = "Boolean", nullable = false, columnDefinition = " boolean default false") // la contrainte est a revoire

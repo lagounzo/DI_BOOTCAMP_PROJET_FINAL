@@ -23,6 +23,9 @@ import { InformationPersonnelleComponent } from './components/patient/informatio
 import { AllergieComponent } from './components/patient/allergie/allergie.component';
 import { AntecedentComponent } from './components/patient/antecedent/antecedent.component';
 import { HttpClientJsonpModule, HttpClientModule } from "@angular/common/http";
+import { VaccinationComponent } from './components/patient/vaccination/vaccination.component';
+import { ConstanteComponent } from './components/patient/constante/constante.component';
+import { AjouterComponent } from './components/medecin/ajouter/ajouter.component';
 // import { DashboardComponent } from './modules/component/dashboard/dashboard.component';
 
 
@@ -43,6 +46,9 @@ import { HttpClientJsonpModule, HttpClientModule } from "@angular/common/http";
     InformationPersonnelleComponent,
     AllergieComponent,
     AntecedentComponent,
+    VaccinationComponent,
+    ConstanteComponent,
+    AjouterComponent,
     // DashboardComponent
   ],
   imports: [

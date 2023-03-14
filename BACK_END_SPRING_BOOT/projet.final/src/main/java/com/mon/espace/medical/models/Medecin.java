@@ -18,6 +18,7 @@ public class Medecin implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  long id_medecin;
     // je dois mettre les exceptions
+
     @Column(name = "firstName", length = 128 )
 
     private String first_name;
@@ -25,7 +26,7 @@ public class Medecin implements Serializable {
 
     private String last_name;
 
-    @Column(name = "specilite", length = 128 )
+    @Column(name = "specility", length = 128 )
 
     private String speciality;
     @Column(name = "Genre", length = 1 )

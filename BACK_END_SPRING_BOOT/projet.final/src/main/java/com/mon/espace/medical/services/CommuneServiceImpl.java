@@ -18,7 +18,7 @@ public class CommuneServiceImpl implements CommuneService{
 
     @Override
     public Commune Create(Commune commune) {
-        return commune.save(commune);
+        return communeRepository.save(commune);
     }
 
     @Override

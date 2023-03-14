@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { ChildrenOutletContexts, RouterModule, Routes } from '@angular/router';
+import { AjouterComponent } from 'src/app/components/medecin/ajouter/ajouter.component';
 import { AntecedentComponent } from 'src/app/components/patient/antecedent/antecedent.component';
+import { ConstanteComponent } from 'src/app/components/patient/constante/constante.component';
 import { ConsultationComponent } from 'src/app/components/patient/consultation/consultation.component';
 import { InformationPersonnelleComponent } from 'src/app/components/patient/information-personnelle/information-personnelle.component';
 import { MaladieComponent } from 'src/app/components/patient/maladie/maladie.component';
@@ -28,6 +30,12 @@ const routes: Routes = [
       },
       {
         path:"antecedent", component : AntecedentComponent
+      },
+      {
+        path:"constante", component : ConstanteComponent
+      },
+      {
+        path:"ajouter", component : AjouterComponent
       },
       {
         path:"", redirectTo : "profil" , pathMatch: "full"

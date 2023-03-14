@@ -1,0 +1,93 @@
+<section class="vh-100 bg-image back-image">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card card-image"> <!--pour l'image du card-->
+            <div class="card-body p-2">
+              <h2 class="text-uppercase text-center mb-1">Ajouter un Medecin</h2>
+
+              <!--  form start-->
+              <form [formGroup]="enregistrer" (ngSubmit)="signUp()">
+                <!-- // formControlName pour les control -->
+                <div class="form-outline mb-1">
+                  <label class="form-label" for="form3Example1cg">Nom</label>
+                  <input formControlName="last_name" type="text" id="form3Example1cg"
+                    class="form-control form-control-sm" />
+                </div>
+
+                <div class="form-outline mb-1">
+                  <label class="form-label" for="form3Example1cg">Prenom</label>
+                  <input formControlName="first_name" type="text" id="form3Example1cg"
+                    class="form-control form-control-sm" />
+                </div>
+                <div class="form-outline mb-1">
+                  <label class="form-label" for="form3Example1cg">Hopital</label>
+                  <input formControlName="first_name" type="text" id="form3Example1cg"
+                    class="form-control form-control-sm" />
+                </div>
+                <div class="form-outline mb-1">
+                  <label class="form-label" for="form3Example1cg">Spécialité</label>
+                  <input formControlName="first_name" type="text" id="form3Example1cg"
+                    class="form-control form-control-sm" />
+                </div>
+                
+                <!-- <div class="row mt-1">
+                                <div class="col-md-12">
+                                  <label for="inputPassword4" class="form-label">Role</label>
+                                  <select class="form-select form-select-mb " aria-label=".form-select-sm example">
+                                    <option selected>-Sélectionnez votre role</option>
+                                    <option value="1">Patient</option>
+                                    <option value="2">Dedecin</option>
+
+                                  </select>
+                                </div>
+                              </div> -->
+
+                <div class="form-outline mb-1">
+                  <label class="form-label" for="form3Example3cg">Votre email</label>
+
+                  <input formControlName="email" type="email" id="form3Example3cg"
+                    class="form-control form-control-sm" />
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example4cg">Password</label>
+
+                  <input formControlName="password" type="password" id="form3Example4cg"
+                    class="form-control form-control-sm" />
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example4cdg">Confirmez votre password</label>
+
+                  <input type="password" id="form3Example4cdg" class="form-control form-control-sm" />
+                </div>
+
+                <!-- <div class="form-check d-flex justify-content-center mb-5">
+                                  <input class="form-check-input me-2" type="checkbox" value=""
+                                      id="form2Example3cg" />
+                                  <label class="form-check-label" for="form2Example3g">
+                                      J'accepte toutes les déclarations dans <a href="#!" class="text-body"><u>les
+                                              conditions d'utilisation</u></a>
+                                  </label>
+                              </div> -->
+
+                <div class="d-flex justify-content-center">
+                  <!-- enregistrer -->
+                  <button type="submit" routerLink="/register"
+                    class="btn btn-success btn-block btn-sm gradient-custom-4 text-body">Enregistrer</button>
+                </div>
+
+                <p class="text-center text-muted mt-1 mb-0">Avez vous deja un compte ? <a href="#!"
+                    class="fw-bold text-body"><u>Connectez-vous</u></a></p>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> <!-- fin section  -->
