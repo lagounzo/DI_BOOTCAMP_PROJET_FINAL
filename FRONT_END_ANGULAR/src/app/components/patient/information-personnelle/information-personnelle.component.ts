@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FunctionService } from 'src/app/api/function.service';
 import { PatientService } from 'src/app/api/patient.service';
+// import { ProfessionService } from 'src/app/api/profession.service';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap'; // import du modale
 
 
@@ -23,16 +24,21 @@ export class InformationPersonnelleComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private patientService: PatientService, private functionService: FunctionService,
     private modalService: NgbModal
-    ){
+    ){}
+    // ,private professionService : ProfessionService
 
-
-  }
   ngOnInit(): void {
     this.infoPerso = this.fb.group({
-      first_name:['',[Validators.required]],
-      last_name:['',[Validators.required]]
+      first_name:['',Validators.required],
+      last_name:['',Validators.required],
+      sexe:['',Validators.required],
+      address:['',Validators.required],
+      tel1: ['',Validators.required],
+      commune: ['',Validators.required]
+
 
     })
+
 // api communes
     this.functionService.getCommune().subscribe({
       next: (response)=> {
@@ -45,23 +51,39 @@ export class InformationPersonnelleComponent implements OnInit {
     })
 
   }
-
+ //api send for personnal information
   inforPersonel(){
-    // if(!this.infoPerso.valid){
-    //   return alert("veuillez saisir les champs vide")
-    // }
-    this.patientService.setPatient({
-      data: this.infoPerso.value,
-      endpoint:"patients"
+    if(this.infoPerso.invalid){
+       alert("veuillez saisir les champs vide")
+    } else{
+      let formVal = this.infoPerso.value;
+      let data = JSON.stringify({
+        "first_name": formVal.first_name,
+        "last_name": formVal.last_name,
+        "sexe": formVal.sexe,
+        "address": formVal.address,
+        "tel1": formVal.tel1,
+        "assurance_maladie": formVal.assurance_maladie,
+        "carte_assurance_maladie": formVal.carte_assurance_maladie,
+        "profession": formVal.profession
 
-    }).subscribe({
-      next:(response :any) => {
-        console.log(response)
-      },
-      error:(error :any) => {
-        console.log(error)
-      }
-    })
+
+    });
+      this.patientService.setPatient(data).subscribe({
+        next:(response :any) => {
+          console.log(response)
+
+        },
+        error:(error :any) => {
+          console.log(error)
+        }
+      
+      })
+      
+      // console.log(this.infoPerso.value)
+    }
+
+
   }
 
   open(content:any) {

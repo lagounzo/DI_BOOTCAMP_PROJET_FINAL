@@ -26,6 +26,7 @@ import { ConstanteComponent } from './components/patient/constante/constante.com
 import { AjouterComponent } from './components/medecin/ajouter/ajouter.component';
 import { HomeComponent } from './components/home/home.component';
 import { SpecialiteComponent } from './components/specialite/specialite.component';
+import { SpecialiteHopitalDrComponent } from './components/patient/specialite-hopital-dr/specialite-hopital-dr.component';
 // import { DashboardComponent } from './modules/component/dashboard/dashboard.component';
 
 
@@ -49,6 +50,7 @@ import { SpecialiteComponent } from './components/specialite/specialite.componen
     AjouterComponent,
     HomeComponent,
     SpecialiteComponent,
+    SpecialiteHopitalDrComponent,
     // DashboardComponent
   ],
   imports: [

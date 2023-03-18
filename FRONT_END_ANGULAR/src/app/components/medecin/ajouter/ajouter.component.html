@@ -1,93 +1,176 @@
-<section class="vh-100 bg-image back-image">
-  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
-    <div class="container h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-          <div class="card card-image"> <!--pour l'image du card-->
-            <div class="card-body p-2">
-              <h2 class="text-uppercase text-center mb-1">Ajouter un Medecin</h2>
+<!-- new register Doc -->
 
-              <!--  form start-->
-              <form [formGroup]="enregistrer" (ngSubmit)="signUp()">
-                <!-- // formControlName pour les control -->
-                <div class="form-outline mb-1">
-                  <label class="form-label" for="form3Example1cg">Nom</label>
-                  <input formControlName="last_name" type="text" id="form3Example1cg"
-                    class="form-control form-control-sm" />
-                </div>
+<div
+  class="d-flex justify-content-between  lex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom style-bar ">
+  <div class="title-h2 ">
+    <h1 class="h2 ">ADD DOCTOR</h1>
+  </div>
+  <div class="btn-toolbar mb-2 mb-md-0">
+  </div>
+</div>
+<!-- fin title -->
 
-                <div class="form-outline mb-1">
-                  <label class="form-label" for="form3Example1cg">Prenom</label>
-                  <input formControlName="first_name" type="text" id="form3Example1cg"
-                    class="form-control form-control-sm" />
-                </div>
-                <div class="form-outline mb-1">
-                  <label class="form-label" for="form3Example1cg">Hopital</label>
-                  <input formControlName="first_name" type="text" id="form3Example1cg"
-                    class="form-control form-control-sm" />
-                </div>
-                <div class="form-outline mb-1">
-                  <label class="form-label" for="form3Example1cg">Spécialité</label>
-                  <input formControlName="first_name" type="text" id="form3Example1cg"
-                    class="form-control form-control-sm" />
-                </div>
-                
-                <!-- <div class="row mt-1">
-                                <div class="col-md-12">
-                                  <label for="inputPassword4" class="form-label">Role</label>
-                                  <select class="form-select form-select-mb " aria-label=".form-select-sm example">
-                                    <option selected>-Sélectionnez votre role</option>
-                                    <option value="1">Patient</option>
-                                    <option value="2">Dedecin</option>
+<!-- modal -->
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Ajoutez un Medecin</h4>
 
-                                  </select>
-                                </div>
-                              </div> -->
-
-                <div class="form-outline mb-1">
-                  <label class="form-label" for="form3Example3cg">Votre email</label>
-
-                  <input formControlName="email" type="email" id="form3Example3cg"
-                    class="form-control form-control-sm" />
-                </div>
-
-                <div class="form-outline mb-4">
-                  <label class="form-label" for="form3Example4cg">Password</label>
-
-                  <input formControlName="password" type="password" id="form3Example4cg"
-                    class="form-control form-control-sm" />
-                </div>
-
-                <div class="form-outline mb-4">
-                  <label class="form-label" for="form3Example4cdg">Confirmez votre password</label>
-
-                  <input type="password" id="form3Example4cdg" class="form-control form-control-sm" />
-                </div>
-
-                <!-- <div class="form-check d-flex justify-content-center mb-5">
-                                  <input class="form-check-input me-2" type="checkbox" value=""
-                                      id="form2Example3cg" />
-                                  <label class="form-check-label" for="form2Example3g">
-                                      J'accepte toutes les déclarations dans <a href="#!" class="text-body"><u>les
-                                              conditions d'utilisation</u></a>
-                                  </label>
-                              </div> -->
-
-                <div class="d-flex justify-content-center">
-                  <!-- enregistrer -->
-                  <button type="submit" routerLink="/register"
-                    class="btn btn-success btn-block btn-sm gradient-custom-4 text-body">Enregistrer</button>
-                </div>
-
-                <p class="text-center text-muted mt-1 mb-0">Avez vous deja un compte ? <a href="#!"
-                    class="fw-bold text-body"><u>Connectez-vous</u></a></p>
-
-              </form>
-
-            </div>
-          </div>
+    <button type="button" class="btn-close btn-en-bas" aria-label="Close" (click)="d('Cross click')"></button>
+  </div>
+  <!-- zone de text  -->
+  <!-- [formGroup]="infoPerso" (ngSubmit)="inforPersonel()" -->
+  <div class="container"> <!-- fin div contenue dashboard-->
+    <form class="row g-3">
+      <!-- <form class="row g-3 needs-validation" novalidate> -->
+      <div class="col-md-6">
+        <div class="form-outline">
+          <label for="validationCustom01" class="form-label">First name</label>
+          <input type="text" class="form-control" id="validationCustom01" formControlName="first_name" required />
+          <div class="valid-feedback">Looks good!</div>
         </div>
       </div>
-    </div>
+      <div class="col-md-6">
+        <div class="form-outline">
+          <label for="validationCustom02" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="validationCustom02" formControlName="" required />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-outline">
+          <label for="validationCustom02" class="form-label">Email</label>
+          <input type="text" class="form-control" id="validationCustom02" formControlName="" required />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <label for="validationCustom03" class="form-label">Hopital</label>
+        <select class="form-select form-select-mb " aria-label=".form-select-sm example">
+          <option selected>-Selection hopital</option>
+          <option value="1">----</option>
+          <option value="2">++++</option>
+          <option value="3">****</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="validationCustom03" class="form-label">Spécialité</label>
+        <select class="form-select form-select-mb " aria-label=".form-select-sm example">
+          <option selected>-Selection commune</option>
+          <option value="1">----</option>
+          <option value="2">++++</option>
+          <option value="3">****</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Matricule</label>
+        <input formControlName="tel1" type="text" class="form-control" id="inputEmail4">
+      </div>
+
+      <div class="col-md-6">
+        <label for="validationCustom03" class="form-label">Commune</label>
+        <select class="form-select form-select-mb " aria-label=".form-select-sm example">
+          <option selected>-Selection commune</option>
+          <option value="1">----</option>
+          <option value="2">++++</option>
+          <option value="3">****</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label for="inputAddress" class="form-label">Address</label>
+        <input formControlName="matricule" type="text" class="form-control" id="inputAddress"
+          placeholder="av 24 rue 32">
+      </div>
+
+      <div class="col-md-6 ">
+        <label for="inputEmail4" class="form-label">Contact</label>
+        <input formControlName="tel1" type="text" class="form-control" id="inputEmail4">
+      </div>
+      <div class="col-md-6 ">
+        <label for="inputEmail4" class="form-label">Password</label>
+        <input formControlName="tel1" type="password" class="form-control" id="inputEmail4">
+      </div>
+      <div class="col-md-6 ">
+        <label for="inputEmail4" class="form-label">Confirmez Password</label>
+        <input formControlName="tel1" type="password" class="form-control" id="inputEmail4">
+      </div>
+
+      <div class="modal-footer btn-valider">
+        <button type="submit" class="btn btn-outline-primary" aria-label="Close"
+          (click)="d('Cross click')">Valider</button>
+      </div>
+
+    </form>
+
   </div>
-</section> <!-- fin section  -->
+
+
+</ng-template>
+
+<button class="btn btn-lg mb-3 btn-outline-info" (click)="open(content)">+</button>
+
+<!-- fin new register Doc -->
+
+
+<!-- LISTE DOC -->
+<div class="row- col-12">
+  <div class=" liste mb-3">
+    <h3>LISTE DES DOCTORS</h3>
+  </div>
+  <table class="table table-light">
+    <thead>
+      <tr>
+        <th scope="col">N°</th>
+        <th scope="col">Docteur</th>
+        <th scope="col">Hopital</th>
+        <th scope="col">Matricule</th>
+        <th scope="col">Spécialité</th>
+        <th scope="col">Sexe</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div> 
+<!-- END DOC LIST -->
+
+<!-- btn delete, update add -->
+<!-- <div class="row">
+  <div class="col-4">
+    <button type="button" class="btn btn-danger  me-4"><i class="fa fa-trash"></i></button>
+    <button type="button" class="btn btn-info  me-4"><i class="fa-sharp fa-regular fa-plus"></i></button>
+    <button type="button" class="btn btn-teal espace-btn  me-4"><i class="fa fa-pen-to-square"></i></button>
+  </div>
+
+</div>  -->
+
+
+<!--  end btn delete, update add -->
+

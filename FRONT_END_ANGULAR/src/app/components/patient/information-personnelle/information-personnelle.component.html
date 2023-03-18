@@ -1,24 +1,44 @@
 
- <!--  -->
+<!-- title -->
+
+<div class="d-flex justify-content-between  lex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom style-bar " >
+  <div class="title-h2 ">
+    <h1 class="h2 ">INFORMATION PERSONNELLE</h1>
+  </div>
+  <div class="btn-toolbar mb-2 mb-md-0">
+    <!-- <div class="btn-group me-2">
+      <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+      <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+    </div> -->
+    <!-- <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+      <span data-feather="calendar" class="align-text-bottom"></span>
+      This week
+    </button> -->
+  </div>
+</div>
+<!-- fin title -->
+
+ <!-- modal -->
  <ng-template #content let-c="close" let-d="dismiss">
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Completer vos informations</h4>
-    <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+    <h4 class="modal-title" id="modal-basic-title">Completez vos informations</h4>
+
+    <button  type="button" class="btn-close btn-en-bas" aria-label="Close" (click)="d('Cross click')"></button>
   </div>
   <!-- zone de text  -->
   <div class="container" [formGroup]="infoPerso" (ngSubmit)="inforPersonel()"> <!-- fin div contenue dashboard-->
     <form class="row g-3">
-      <form class="row g-3 needs-validation" novalidate>
+      <!-- <form class="row g-3 needs-validation" novalidate> -->
         <div class="col-md-6">
           <div class="form-outline">
-            <input type="text" class="form-control" id="validationCustom01" value="" required />
+            <input type="text" class="form-control" id="validationCustom01" formControlName="first_name" required />
             <label for="validationCustom01" class="form-label">First name</label>
             <div class="valid-feedback">Looks good!</div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-outline">
-            <input type="text" class="form-control" id="validationCustom02" value="" required />
+            <input type="text" class="form-control" id="validationCustom02" formControlName="last_name" required />
             <label for="validationCustom02" class="form-label">Last name</label>
             <div class="valid-feedback">Looks good!</div>
           </div>
@@ -31,74 +51,55 @@
             <div class="invalid-feedback">Please provide a valid number.</div>
           </div>
         </div>
-        <!-- <div class="col-md-6">
-          <div class="form-outline">
-            <input type="text" class="form-control" id="validationCustom03" required />
-            <label for="validationCustom03" class="form-label">Genre</label>
-            <select class="form-select form-select-mb " aria-label=".form-select-sm example">
-              <option selected>Sexe</option>
-              <option value="1">F</option>
-              <option value="2">M</option>
-              <option value="3">NB</option>
-            </select>
-          </div>
-        </div> -->
 
-        <!-- <div class="col-md-6">
-          <label for="validationCustom03" class="form-label">Genre</label>
-          <select class="form-select form-select-mb " aria-label=".form-select-sm example">
+        <div class="col-md-2">
+          <select formControlName="sexe" class="form-select form-select-mb " aria-label=".form-select-sm example">
             <option selected>Sexe</option>
             <option value="1">F</option>
             <option value="2">M</option>
             <option value="3">NB</option>
           </select>
-        </div> -->
-
-
-          <div class="col-md-2">
-            <select class="form-select form-select-mb " aria-label=".form-select-sm example">
-              <option selected>Sexe</option>
-              <option value="1">F</option>
-              <option value="2">M</option>
-              <option value="3">NB</option>
-              <!-- <label for="validationCustom03" class="form-label">Genre</label> -->
-            </select>
-          </div>
+          <label for="validationCustom03" class="form-label">Genre</label>
+        </div>
 
           <div class="col-md-3">
-            <!-- <label for="inputPassword4" class="form-label">Commune</label> -->
-            <select class="form-select form-select-mb " aria-label=".form-select-sm example">
+            <select formControlName="commune" class="form-select form-select-mb " aria-label=".form-select-sm example">
               <option selected>Commune</option>
-              <!-- les conditions ngIf -->
+              <!-- les conditions ngFor -->
               <option *ngFor="let commune of communes" value="{{commune.id_commune}}">{{commune.disrict_name}}</option>
             </select>
+            <label for="inputPassword4" class="form-label">Commune</label>
 
           </div>
 
           <div class="col-md-6">
             <label for="inputAddress" class="form-label">Address</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="av 24 rue 32">
+            <input formControlName="address" type="text" class="form-control" id="inputAddress" placeholder="av 24 rue 32">
           </div>
 
           <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Contact</label>
-            <input type="email" class="form-control" id="inputEmail4">
+            <label  for="inputEmail4" class="form-label">Contact</label>
+            <input formControlName="tel1" type="text" class="form-control" id="inputEmail4">
           </div>
 
             <div class="col-md-6">
-              <label for="inputAddress" class="form-label">profession</label>
+              <label for="inputAddress" class="form-label">Profession</label>
               <input type="text" class="form-control" id="inputAddress" placeholder="ingenieur système">
           </div>
+
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-outline-info" aria-label="Close" (click)="d('Cross click')">Valider</button>
+          </div>
+
       </form>
 
-    </form> <!--fin form-->
+    <!-- </form>  -->
+    <!-- fin form -->
   </div>
 
-  <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Valider</button>
-  </div>
+
 </ng-template>
 
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Completez votre profil</button>
+<button class="btn btn-lg btn-outline-info" (click)="open(content)">Completez votre profil</button>
 
  <!--  -->

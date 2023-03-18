@@ -42,6 +42,16 @@ signUp(){
   return alert("veuillerz remplir tous les champs")
 
   }
+
+  // role pour identifier les users
+  const  data = {
+    ...this.enregistrer.value,
+    profilUser:{
+      id_profilUser:1
+    }
+
+  };
+
   this.apiService.post({
     data : this.enregistrer.value,
     endpoint: "commtUsers"

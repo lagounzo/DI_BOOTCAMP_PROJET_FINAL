@@ -6,7 +6,8 @@ export class Patient{
     public email: string = "",
     public sexe: string = "",
     public address: string = "",
-    // public commune: string = "",
-    // public fonction : string = ""
+    public assurance_maladie : string = "",
+    public commune: string = "",
+    public profession : string = ""
   ) {}
 }

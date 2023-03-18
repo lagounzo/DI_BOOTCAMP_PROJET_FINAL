@@ -204,7 +204,7 @@
 
 <div class="container-fluid">
   <div class="row">
-    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse dashboard">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block  sidebar collapse dashboard  bgcolorsidebar">
       <div class="position-sticky pt-3 sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
@@ -214,33 +214,39 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"   >
+            <a class="nav-link"  routerLink="./informationPersonnelle" >
               <i class="fa-solid fa-user-tie"></i>
               Information-personnelle
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" routerLink="./consultation">
               <span data-feather="shopping-cart" class="align-text-bottom"></span>
               Mes consultations
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" routerLink="./prescription">
               <span data-feather="users" class="align-text-bottom"></span>
               Prescrition
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"   >
+            <a class="nav-link"  routerLink="./antecedent" >
               <span data-feather="bar-chart-2" class="align-text-bottom"></span>
               Antecedent
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" routerLink="./ajoutMedecin">
               <span data-feather="layers" class="align-text-bottom"></span>
-              Ajouter Medecin
+              Docteur
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="./specialiteHopitalDr">
+              <span data-feather="layers" class="align-text-bottom"></span>
+              Specialité
             </a>
           </li>
         </ul>
@@ -261,7 +267,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="file-text" class="align-text-bottom"></span>
-              Mes paatients
+              Mes patients
             </a>
           </li>
         </ul>
@@ -269,22 +275,23 @@
     </nav>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Dashboard</h1>
-        <div class="btn-toolbar mb-2 mb-md-0">
-          <div class="btn-group me-2">
+      <!-- <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom " >
+        <h1 class="h2">INFORMATION PERSONNELLE</h1>
+        <div class="btn-toolbar mb-2 mb-md-0"> -->
+          <!-- <div class="btn-group me-2">
             <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
             <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-          </div>
-          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+          </div> -->
+          <!-- <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
             <span data-feather="calendar" class="align-text-bottom"></span>
             This week
-          </button>
-        </div>
-      </div> <!--fin du side bar-->
+          </button> -->
+        <!-- </div> -->
+      <!-- </div> -->
+       <!--fin du side bar-->
 
            <router-outlet></router-outlet>
-      <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+      <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
 
     </main>
   </div>

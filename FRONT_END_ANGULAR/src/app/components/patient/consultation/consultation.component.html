@@ -1,7 +1,21 @@
-
-<div class="row-mt-4">
+<div class="d-flex justify-content-between  lex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom style-bar " >
+  <div class="title-h2 ">
+    <h1 class="h2 ">CONSULTATION</h1>
+  </div>
+  <div class="btn-toolbar mb-2 mb-md-0">
+    <!-- <div class="btn-group me-2">
+      <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+      <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+    </div> -->
+    <!-- <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+      <span data-feather="calendar" class="align-text-bottom"></span>
+      This week
+    </button> -->
+  </div>
+</div> <!--fin du side bar-->
+<!-- <div class="row-mt-4">
   <h4>MES CONSULTATIONS</h4>
-</div>
+</div> -->
 
 
 <!--  modale -->
@@ -17,12 +31,12 @@
 
     <!-- liste deroulante -->
     <div class="container">
-      <form class="row g-3">
+      <form class="row g-3" [formGroup]="consult" (ngSubmit)="diagnostique()" >
 
         <div class="row-mt-2">
           <div class="col-md-12">
-            <label for="inputEmail4" class="form-label">Nom de la maladie</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Ex: Drépanocytose">
+            <label for="inputEmail4" class="form-label">Decrivez vos mal</label>
+            <input formControlName="description" type="text" class="form-control" id="inputEmail4" placeholder="Ex: Drépanocytose">
           </div>
         </div>
 
@@ -62,6 +76,17 @@
               <option value="20">urologie</option>
             </select>
           </div>
+
+          <!--  -->
+          <div class="col-md-12">
+            <label for="inputPassword4" class="form-label">Medecin</label>
+            <select formControlName="medecin" class="form-select form-select-mb " aria-label=".form-select-sm example" >
+              <option selected>-Choix de medecin</option>
+              <option value="1">N'GUESSAN</option>
+              <option value="2">Dr N'ZO </option>
+            </select>
+          </div>
+          <!--  -->
         </div>
         <!-- fin zone de text  -->
         <div class="row-mt-4">
@@ -78,11 +103,11 @@
     </div> <!-- fin div contenue dashboard-->
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">envoyer</button>
+    <button type="button" class="btn btn-outline-info" (click)="c('Save click')">envoyer</button>
   </div>
 </ng-template>
 
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Nouvelle Consultation</button>
+<button class="btn btn-lg btn-outline-info" (click)="open(content)">Nouvelle Consultation</button>
 
 <!--  tableau consultation -->
 <!-- <table class="table table-success table-striped">
