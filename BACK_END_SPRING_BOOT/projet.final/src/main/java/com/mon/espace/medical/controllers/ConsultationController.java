@@ -20,6 +20,7 @@ public class ConsultationController  {
 
     @PostMapping
     public Consultation Create(@RequestBody Consultation consultation) {
+
         return consultationService.Create(consultation);
     }
 

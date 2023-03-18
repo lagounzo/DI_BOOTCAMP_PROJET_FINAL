@@ -14,7 +14,8 @@ public class PatientController {
     @Autowired
     PatientService patientService;
     //recuperer tous les elements de la table
-    @GetMapping()
+
+    @GetMapping
     public List<Patient> getAll() {
         return patientService.getAll();
     }

@@ -36,10 +36,12 @@ public class Fonction implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date updatedat;
 
-    // la relation
+    // la relation liste en retoure
     @OneToMany(mappedBy = "fonction")
     @JsonIdentityReference(alwaysAsId=true)
     private List<Patient>patientList;
+
+
 
 
 }

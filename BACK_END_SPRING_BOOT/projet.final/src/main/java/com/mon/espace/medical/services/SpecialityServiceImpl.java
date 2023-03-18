@@ -3,9 +3,10 @@ package com.mon.espace.medical.services;
 import com.mon.espace.medical.models.Speciality;
 import com.mon.espace.medical.repository.SpecialityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class SpecialityServiceImpl implements SpecialityService{
 
     // pour une injection d'indepense

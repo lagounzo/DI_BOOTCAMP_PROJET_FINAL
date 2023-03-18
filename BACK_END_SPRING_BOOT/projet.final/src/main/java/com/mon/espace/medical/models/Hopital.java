@@ -28,9 +28,12 @@ public class Hopital implements Serializable {
     @Column(name = "phone", length = 20 )
     private String tel1 ;
     @Column(name = "address", length = 128 )
-
     private String address;
+    @Column(name = "created_at", columnDefinition = "TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP", insertable = false, updatable = false)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createdat;
+    @Column(name = "updated_at", columnDefinition = "TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP", insertable = false, updatable = false)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date updatedat;
 
 

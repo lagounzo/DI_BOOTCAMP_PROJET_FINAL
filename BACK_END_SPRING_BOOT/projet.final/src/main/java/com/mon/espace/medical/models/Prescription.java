@@ -1,5 +1,8 @@
 package com.mon.espace.medical.models;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,6 +17,8 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 @Table(name = "prescriptions")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property= "id_prescription") //a mettre sur toutes les table pour eviter les erreur des bouble infinie
+
 public class Prescription {
 
         @Id
@@ -26,10 +31,21 @@ public class Prescription {
         private String qte;
         @Column(name = "Boolean", nullable = false, columnDefinition = " boolean default false") // a revoire la condition
         private  Boolean status;
+
+        ////// LES RELATIONS////////
+
+        /*prescription*/
+        @OneToOne(mappedBy = "prescription")
+        @JsonIdentityReference(alwaysAsId=true)
+        private Consultation consultation;
+
+
+        @Column(name = "created_at", columnDefinition = "TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP", insertable = false, updatable = false)
+        @Temporal(TemporalType.TIMESTAMP)
         private Date createdat;
+        @Column(name = "updated_at", columnDefinition = "TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP", insertable = false, updatable = false)
+        @Temporal(TemporalType.TIMESTAMP)
         private Date updatedat;
-        //une prescription pour une ordonnance
-      /*  @OneToOne(fetch = FetchType.LAZY)
-        Consultation consultations;*/
+
 
 }

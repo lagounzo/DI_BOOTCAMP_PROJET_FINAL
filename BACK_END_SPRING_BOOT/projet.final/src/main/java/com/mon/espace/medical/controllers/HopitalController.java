@@ -13,21 +13,21 @@ public class HopitalController {
     @Autowired
     HopitalService hopitalService;
 //recuperer tous les elements de la table
-    @GetMapping()
+    @GetMapping("/show")
     public List<Hopital> getAll() {
         return hopitalService.getAll();
     }
 
-    @PostMapping
+    @PostMapping("/create")
     public Hopital Create(@RequestBody Hopital hopital) {
         return hopitalService.Create(hopital);
     }
 
-    @PutMapping
+    @PutMapping("/update/{id}")
     public Hopital Update(@RequestBody Hopital hopital) {
         return hopitalService.Update(hopital);
     }
-    @DeleteMapping
+    @DeleteMapping("/delete/{id}")
     public void Delete(Long id) {
         hopitalService.Delete(id);
     }

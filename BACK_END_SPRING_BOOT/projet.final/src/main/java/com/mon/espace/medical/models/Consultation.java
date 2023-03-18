@@ -1,5 +1,8 @@
 package com.mon.espace.medical.models;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -7,6 +10,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 
 @Getter
@@ -15,38 +19,43 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 @Table(name = "consultations")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property= "id_consultation") //a mettre sur toutes les table pour eviter les erreur des bouble infinie
+
 public class Consultation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id_consultation;
 
-    @Column(name = "dateRdv" , columnDefinition = "timestamp")
-    private Date dateRdv ;
-    @Column(name = "Boolean", nullable = false, columnDefinition = " boolean default false") // la contrainte est a revoire
-    private  Boolean status;
+   /* @Column(name = "dateRdv" , columnDefinition = "timestamp")
+    private Date dateRdv ;*/
+
+    @Column(name = "motif_mal", length = 250)
+    private String description;
+
+    @Column(name = "observation", length = 250)
+    private String commentaire;
+
+   /* @Column(name = "Boolean", nullable = false, columnDefinition = " boolean default false") // la contrainte est a revoire
+    private  Boolean status;*/
+    @Column(name = "created_at", columnDefinition = "TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP", insertable = false, updatable = false)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createdat;
+    @Column(name = "updated_at", columnDefinition = "TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP", insertable = false, updatable = false)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date updatedat;
 
 
-    //plusieurs consultations ou 1 consultation pour un patient
+    //plusieurs consultations ou  consultation pour un patient
 
-  /*  @ManyToOne
-    Patient patient ;*/
-     // plusieurs consultation ou 1 pour un medecin
-   /* @ManyToOne
-    Medecin medecin;
+  @OneToMany(mappedBy = "consultation")
+  @JsonIdentityReference(alwaysAsId=true)
+  private List<Patient> patientList;
 
-    @OneToOne(mappedBy = "consultation",fetch = FetchType.LAZY)
-    List<Prescription> prescription ;*/
+  @OneToOne
+  @JsonIdentityReference(alwaysAsId=true)
+    private Prescription prescription;
 
-    //medecin a une liste de  consultations
 
-   /* @ManyToOne( fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_medecin")
-    private Medecin medecin;*/
 
-    // patient pere et consultation enfant
- /*   @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_patient")
-    private Patient patient;*/
+
 }

@@ -12,7 +12,7 @@ public class MedecinController {
     @Autowired
     //recuperer tous les elements de la table
     MedecinService medecinService;
-    @GetMapping()
+    @GetMapping
     public List<Medecin> getAll() {
         return medecinService.getAll();
     }
