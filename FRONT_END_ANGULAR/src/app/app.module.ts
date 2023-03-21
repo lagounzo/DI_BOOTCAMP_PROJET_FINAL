@@ -28,6 +28,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SpecialiteComponent } from './components/specialite/specialite.component';
 import { SpecialiteHopitalDrComponent } from './components/patient/specialite-hopital-dr/specialite-hopital-dr.component';
 // import { DashboardComponent } from './modules/component/dashboard/dashboard.component';
+import {NgxTypedJsModule} from 'ngx-typed-js';
 
 
 @NgModule({
@@ -57,12 +58,14 @@ import { SpecialiteHopitalDrComponent } from './components/patient/specialite-ho
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    NgxTypedJsModule,
     ReactiveFormsModule, // pour le formulaire reactif
       BrowserAnimationsModule,
       TuiRootModule,
       TuiDialogModule,
       TuiAlertModule,
-      HttpClientModule // impoter pour l api
+      HttpClientModule, // impoter pour l api
+
 ],
   providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}],
   bootstrap: [AppComponent]

@@ -10,7 +10,7 @@ import { NgIf } from '@angular/common';
 
 })
 export class HomeComponent {
-  images = ["/assets/imag/dr_patient.jpg","/assets/imag/shot-health.jpg","/assets/imag/logo.jpeg"];
+  images = ["/assets/imag/dr_patient.jpg","/assets/imag/shot-health.jpg","/assets/imag/specialites.png"];
 
 
 }

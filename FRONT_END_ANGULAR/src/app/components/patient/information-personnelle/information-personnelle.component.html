@@ -6,14 +6,7 @@
     <h1 class="h2 ">INFORMATION PERSONNELLE</h1>
   </div>
   <div class="btn-toolbar mb-2 mb-md-0">
-    <!-- <div class="btn-group me-2">
-      <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-      <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-    </div> -->
-    <!-- <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-      <span data-feather="calendar" class="align-text-bottom"></span>
-      This week
-    </button> -->
+
   </div>
 </div>
 <!-- fin title -->
@@ -31,14 +24,14 @@
       <!-- <form class="row g-3 needs-validation" novalidate> -->
         <div class="col-md-6">
           <div class="form-outline">
-            <input type="text" class="form-control" id="validationCustom01" formControlName="first_name" required />
+            <input formControlName="first_name" type="text" class="form-control" id="validationCustom01" required />
             <label for="validationCustom01" class="form-label">First name</label>
             <div class="valid-feedback">Looks good!</div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-outline">
-            <input type="text" class="form-control" id="validationCustom02" formControlName="last_name" required />
+            <input formControlName="last_name" type="text" class="form-control" id="validationCustom02" required />
             <label for="validationCustom02" class="form-label">Last name</label>
             <div class="valid-feedback">Looks good!</div>
           </div>
@@ -46,18 +39,18 @@
 
         <div class="col-md-6">
           <div class="form-outline">
-            <input type="text" class="form-control" id="validationCustom03" required />
+            <input formControlName="assurance_maladie" type="text" class="form-control" id="validationCustom03" required />
             <label for="validationCustom03" class="form-label">N° Assurance maladie</label>
             <div class="invalid-feedback">Please provide a valid number.</div>
           </div>
         </div>
 
         <div class="col-md-2">
-          <select formControlName="sexe" class="form-select form-select-mb " aria-label=".form-select-sm example">
+          <select formControlName="gender" class="form-select form-select-mb " aria-label=".form-select-sm example">
             <option selected>Sexe</option>
-            <option value="1">F</option>
-            <option value="2">M</option>
-            <option value="3">NB</option>
+            <option value="F">F</option>
+            <option value="M">M</option>
+            <option value="NB">NB</option>
           </select>
           <label for="validationCustom03" class="form-label">Genre</label>
         </div>
@@ -66,7 +59,7 @@
             <select formControlName="commune" class="form-select form-select-mb " aria-label=".form-select-sm example">
               <option selected>Commune</option>
               <!-- les conditions ngFor -->
-              <option *ngFor="let commune of communes" value="{{commune.id_commune}}">{{commune.disrict_name}}</option>
+              <option *ngFor="let commune of communes" value="{{commune.id_municipality}}">{{commune.municipality_name}}</option>
             </select>
             <label for="inputPassword4" class="form-label">Commune</label>
 
@@ -79,13 +72,13 @@
 
           <div class="col-md-6">
             <label  for="inputEmail4" class="form-label">Contact</label>
-            <input formControlName="tel1" type="text" class="form-control" id="inputEmail4">
+            <input formControlName="contact" type="text" class="form-control" id="inputEmail4">
+          </div>
+          <div class="col-md-4">
+            <label  for="inputEmail4" class="form-label">Date de naissance</label>
+            <input formControlName="birthday" type="date" class="form-control" id="inputEmail4">
           </div>
 
-            <div class="col-md-6">
-              <label for="inputAddress" class="form-label">Profession</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="ingenieur système">
-          </div>
 
           <div class="modal-footer">
             <button type="submit" class="btn btn-outline-info" aria-label="Close" (click)="d('Cross click')">Valider</button>
@@ -102,4 +95,5 @@
 
 <button class="btn btn-lg btn-outline-info" (click)="open(content)">Completez votre profil</button>
 
- <!--  -->
+<!-- <app-footer></app-footer> -->
+

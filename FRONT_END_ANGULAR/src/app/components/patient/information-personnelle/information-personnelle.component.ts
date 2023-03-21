@@ -31,10 +31,13 @@ export class InformationPersonnelleComponent implements OnInit {
     this.infoPerso = this.fb.group({
       first_name:['',Validators.required],
       last_name:['',Validators.required],
-      sexe:['',Validators.required],
+      gender:['',Validators.required],
       address:['',Validators.required],
-      tel1: ['',Validators.required],
-      commune: ['',Validators.required]
+      contact: ['',Validators.required],
+      commune: ['',Validators.required],
+      assurance_maladie: ['',Validators.required],
+      birthday: ['',Validators.required],
+
 
 
     })
@@ -53,19 +56,20 @@ export class InformationPersonnelleComponent implements OnInit {
   }
  //api send for personnal information
   inforPersonel(){
+
     if(this.infoPerso.invalid){
-       alert("veuillez saisir les champs vide")
+      //  alert("veuillez saisir les champs vide")
     } else{
       let formVal = this.infoPerso.value;
       let data = JSON.stringify({
         "first_name": formVal.first_name,
         "last_name": formVal.last_name,
-        "sexe": formVal.sexe,
+        "gender": formVal.gender,
         "address": formVal.address,
-        "tel1": formVal.tel1,
+        "contact": formVal.contact,
         "assurance_maladie": formVal.assurance_maladie,
-        "carte_assurance_maladie": formVal.carte_assurance_maladie,
-        "profession": formVal.profession
+        "commune" : formVal.commune,
+        "birthday": formVal.birthday,
 
 
     });
@@ -80,7 +84,7 @@ export class InformationPersonnelleComponent implements OnInit {
       
       })
       
-      // console.log(this.infoPerso.value)
+      console.log(this.infoPerso.value)
     }
 
 

@@ -12,6 +12,16 @@
 
 /*  couleur side bar  */
 
-/* .bgcolorsidebar{
-  background-color: #048B9A;
-} */
+.bgcolorsidebar{
+  /* background-color: #048B9A; */
+  background-color:  hsl( 45  95% 62% );
+
+
+}
+
+
+.prof{
+
+  border: 1px solid white;
+  border-radius: 50px;
+}

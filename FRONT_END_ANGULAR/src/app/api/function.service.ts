@@ -20,7 +20,7 @@ export class FunctionService {
   }
 
   getRegister() {
-   return this.httpService.get("commtUsers");
+   return this.httpService.get("/api/municipality/show");
   }
 
   deleteRegister(id : string) {
@@ -28,7 +28,7 @@ export class FunctionService {
   }
 
   getCommune() {
-    return this.httpService.get('communes');
+    return this.httpService.get('api/municipality/show');
   }
 
 

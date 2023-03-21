@@ -48,9 +48,7 @@ const routes: Routes = [
       {
         path: "informationPersonnelle", component: InformationPersonnelleComponent
       },
-      {
-        path:"consultation", component: ConsultationComponent
-      },
+
       {
         path:"antecedent", component : AntecedentComponent
       },

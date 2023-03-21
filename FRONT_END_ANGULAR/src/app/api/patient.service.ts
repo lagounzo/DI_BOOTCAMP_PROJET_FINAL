@@ -11,20 +11,20 @@ export class PatientService {
 
   constructor(private httpInfo : HttpService ) {}
 
-  setPatient(patient : any){
-    return this.httpInfo.post({endpoint : 'patients',data : patient});
+  setPatient(profil : any){
+    return this.httpInfo.post({endpoint : 'api/profil',data : profil});
 
   }
 
-  updatePatient(patient : any) {
-    return this.httpInfo.put({endpoint : 'patients',data : patient});
+  updatePatient(profil : any) {
+    return this.httpInfo.put({endpoint : 'api/profil',data : profil});
   }
 
   getRegister() {
-    return this.httpInfo.get("patients");
+    return this.httpInfo.get("api/profil");
    }
 
    deleteRegister(id : string) {
-    return this.httpInfo.delete(`patients ${id}`);
+    return this.httpInfo.delete(`api/profil ${id}`);
   }
 }

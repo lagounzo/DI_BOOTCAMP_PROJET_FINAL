@@ -161,46 +161,48 @@
 <!--fin header-->
 
 <!-- HEADER -->
- <header class="p-3 mb-3 border-bottom">
-  <div class="container">
-    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-          <use xlink:href="#bootstrap" />
-        </svg>
-      </a>
-
-      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 link-secondary">Overview</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Inventory</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Customers</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Products</a></li>
-      </ul>
-
-      <!-- bar de recherche -->
-      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-      </form>
-
-      <div class="dropdown text-end ms-auto">
-        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
-          aria-expanded="false">
-          <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
-        </a>
-        <ul class="dropdown-menu text-small">
-          <li><a class="dropdown-item" href="#">New project...</a></li>
-          <li><a class="dropdown-item" href="#">Paramettre</a></li>
-          <li><a class="dropdown-item" href="#">Profil</a></li>
-          <li>
-            <hr class="dropdown-divider">
+ <header class="p-2 mb-3 border-bottom">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">MON ESPACE MEDICAL</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
-          <li><a class="dropdown-item" href="#">Deconnexion</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
         </ul>
+        <div class="d-flex " >
+          <span class="profilimg  me-5 mt-3">OZN FERA</span >
+
+
+          <img class="prof" src="/assets/imag/login.jpg" alt="" height="45" width="40" >
+        </div>
       </div>
-     </div>
-  </div>
+    </div>
+  </nav>
+  <!--  -->
 </header>
-<!-- FIN HEADER -->
+ <!-- FIN HEADER  -->
 
 <div class="container-fluid">
   <div class="row">
@@ -216,37 +218,43 @@
           <li class="nav-item">
             <a class="nav-link"  routerLink="./informationPersonnelle" >
               <i class="fa-solid fa-user-tie"></i>
-              Information-personnelle
+              COMPLETEZ PROFIL
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="./consultation">
               <span data-feather="shopping-cart" class="align-text-bottom"></span>
-              Mes consultations
+              MES CONSULTATIONS
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="./prescription">
               <span data-feather="users" class="align-text-bottom"></span>
-              Prescrition
+              ORDONNANCE
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link"  routerLink="./antecedent" >
               <span data-feather="bar-chart-2" class="align-text-bottom"></span>
-              Antecedent
+              ANTECEDENT
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="./ajoutMedecin">
               <span data-feather="layers" class="align-text-bottom"></span>
-              Docteur
+              DOCTEUR
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="./specialiteHopitalDr">
               <span data-feather="layers" class="align-text-bottom"></span>
-              Specialité
+              SPECIALITE
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="./constante">
+              <span data-feather="layers" class="align-text-bottom"></span>
+              CONSTANTES
             </a>
           </li>
         </ul>
@@ -292,6 +300,7 @@
 
            <router-outlet></router-outlet>
       <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
+
 
     </main>
   </div>
