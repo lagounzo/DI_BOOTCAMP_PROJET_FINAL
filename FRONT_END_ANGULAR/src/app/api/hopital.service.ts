@@ -1,5 +1,4 @@
 import { Injectable } from "@angular/core";
-import { Register } from "../interface/register";
 import { HttpService } from "./api.service";
 
 @Injectable({
@@ -12,24 +11,22 @@ export class HopitalService {
   }
 
   setHopital(hopital : any) {
-   return this.httpService.post({endpoint : 'hopitals',data : hopital});
+   return this.httpService.post({endpoint : '/api/hopital',data : hopital});
   }
 
   updateHopital(hopital : any) {
-    return this.httpService.put({endpoint : 'hopitals',data : hopital});
+    return this.httpService.put({endpoint : '/api/hopital/create',data : hopital});
   }
 
   getHopital() {
-   return this.httpService.get("hopitals");
+   return this.httpService.get("/api/hopital/show");
   }
 
   deleteHopital(id : string) {
-    return this.httpService.delete(`hopitals ${id}`);
+    return this.httpService.delete(`/api/hopital ${id}`);
   }
 
-  // getCommune() {
-  //   return this.httpService.get('communes');
-  // }
+ 
 
 
 

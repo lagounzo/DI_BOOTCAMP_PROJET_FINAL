@@ -14,7 +14,7 @@
 /* navbar */
 
 .bg-infocolor {
- 
+
   background-color:  hsl( 45  95% 62% );
 }
 
@@ -40,3 +40,20 @@
 .para{
   color: hsl( 45  95% 62% );
 }
+
+/* ffet sur noglet */
+
+.effet:hover{
+  /* box-shadow: 0 11px 11px 0 rgba(0, 0, 0,.16); */
+  transform: translateY(-5px);
+  background-color:  rgba(0, 128, 0, 0.514);
+  border-radius: 50rem;
+}
+
+.effetp:hover{
+  /* box-shadow: 0 11px 11px 0 rgba(0, 0, 0,.16); */
+  transform: translateY(-5px);
+  background-color:  rgba(173, 173, 226, 0.548);
+  border-radius: 50rem;
+}
+

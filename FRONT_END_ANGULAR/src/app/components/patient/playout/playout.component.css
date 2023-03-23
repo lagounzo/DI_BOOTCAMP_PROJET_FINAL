@@ -18,6 +18,9 @@
 
 
 }
+.nav-link{
+  color: white;
+}
 
 
 .prof{
@@ -25,3 +28,24 @@
   border: 1px solid white;
   border-radius: 50px;
 }
+
+
+/* POUR LE HOVER  SUR PRESCRIPTION*/
+.style-bar8:hover{
+  transform: translateY(-5px);
+  background-color:  rgba(173, 173, 226, 0.548);
+  border-radius: 50rem;
+}
+
+
+/* add info */
+
+.style-bar1:hover
+{
+  transform: translateY(-5px);
+  background-color:  rgba(173, 173, 226, 0.548);
+  border-radius: 50rem;
+}
+
+
+/*  */

@@ -1,53 +1,52 @@
-<div class="row col-md-12">
-  <div class="col-md-5">
-    <div class="card " style="width: 18rem;">
+<div class=" row justify-content-evenly">
+  <div class="row col-md-12">
+    <div class="col-md-6">
+      <div class="card " style="width: 18rem;">
 
-      <div class="card-body ">
-        <form class=" g-3 mb-3">
-          <!-- <form class="row g-3 needs-validation" novalidate> -->
-          <div class="col-md-6">
-            <div class="form-outline">
-              <label for="validationCustom01" class="form-label">Creer une specialité</label>
-              <input type="text" class="form-control" id="validationCustom01" formControlName="first_name" required />
+        <div class="card-body ">
+          <form class=" g-3 mb-3">
+            <!-- <form class="row g-3 needs-validation" novalidate> -->
+            <div class="col-md-6">
+              <div class="form-outline">
+                <label for="validationCustom01" class="form-label">Creer une specialité</label>
+                <input type="text" class="form-control" id="validationCustom01" formControlName="first_name" required />
+              </div>
             </div>
-          </div>
-        </form>
-        <a href="" class="btn btn-info my-3">Creer</a>
-      </div>
-    </div> <!--fin specialite-->
-  </div>
-  <div class="col-md-5">
-
-    <!-- debut hobital -->
-    <div class="card mb-3" style="width: 18rem; margin-top: 10px;">
-
-      <div class="card-body">
-        <form class="row g-3">
-          <!-- <form class="row g-3 needs-validation" novalidate> -->
-          <div class="col-md-6">
-            <div class="form-outline">
-              <label for="validationCustom01" class="form-label">Creer un hopital</label>
-              <input type="text" class="form-control" id="validationCustom01" formControlName="first_name" required />
-            </div>
-          </div>
-        </form>
-        <a href="" class="btn btn-info my-3">Creer</a>
-      </div>
+          </form>
+          <a href="" class="btn btn-info my-3">Creer</a>
+        </div>
+      </div> <!--fin specialite-->
     </div>
+    <div class="col-md-6">
 
-    <!-- fin  hobital -->
+      <!-- debut hobital -->
+      <div class="card " style="width: 18rem;">
+
+        <div class="card-body ">
+          <form class=" g-3 mb-3">
+            <!-- <form class="row g-3 needs-validation" novalidate> -->
+            <div class="col-md-6">
+              <div class="form-outline">
+                <label for="validationCustom01" class="form-label">Creer un Docteur</label>
+                <input type="text" class="form-control" id="validationCustom01" formControlName="first_name" required />
+              </div>
+            </div>
+          </form>
+          <a href="" class="btn btn-info my-3">Creer</a>
+        </div>
+      </div>
+
+      <!-- fin  hobital -->
+    </div>
   </div>
-
-
-
 </div>
 
 
 <!-- tableau specialite -->
-<div class="row col-md-12">
+<div class="row justify-content-evenly my-5">
   <div class="col-md-5">
     <div class=" liste mb-3">
-      <h3>LISTE DES DOCTORS</h3>
+      <h3>LISTE DES SPECIALITES</h3>
     </div>
     <table class="table table-light">
       <thead>
@@ -66,23 +65,25 @@
 
         <tr>
           <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
+          <td>DR N ZO</td>
+          <td>CHU COCODY</td>
+          <td>1420245CI</td>
+          <td>GENERALISTE</td>
+          <td>M</td>
         </tr>
         <tr>
+
           <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
+          <td>OKAFOR</td>
+          <td>BONNE SANTE</td>
+          <td>2420245CI</td>
+          <td>DENTISTE</td>
+          <td>F</td>
         </tr>
       </tbody>
     </table>
   </div>
-</div>
+<!-- </div> -->
 
 <!-- fin tableau specialite -->
 
@@ -90,7 +91,7 @@
 
 
 <!--  debut hopital-->
-<div class="row col-md-12">
+<!-- <div class="row col-md-12"> -->
   <div class="col-md-5">
     <div class=" liste mb-3">
       <h3>LISTE DES DOCTORS</h3>
@@ -112,18 +113,18 @@
 
         <tr>
           <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
+          <td colspan="2"></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
       </tbody>
     </table>
@@ -133,11 +134,11 @@
 
 
 <!-- btn delete, update add -->
-<div class="row">
-  <div class="col-4">
-    <button type="button" class="btn btn-danger  me-4"><i class="fa fa-trash"></i></button>
-    <button type="button" class="btn btn-info  me-4"><i class="fa-sharp fa-regular fa-plus"></i></button>
-    <button type="button" class="btn btn-teal espace-btn  me-4"><i class="fa fa-pen-to-square"></i></button>
+<div class="row justify-content-center">
+  <div class="col-4 text-center">
+    <button type="button" class="btn btn-danger  mx-2"><i class="fa fa-trash"></i></button>
+    <button type="button" class="btn btn-info  mx-2"><i class="fa-sharp fa-regular fa-plus"></i></button>
+    <button type="button" class="btn btn-teal espace-btn  mx-2"><i class="fa fa-pen-to-square"></i></button>
   </div>
 
 </div>

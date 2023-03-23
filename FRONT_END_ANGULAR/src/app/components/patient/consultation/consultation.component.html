@@ -21,6 +21,7 @@
 <!--  modale -->
 
 <ng-template #content let-c="close" let-d="dismiss">
+  <form class="row g-3" #form="ngForm"  (ngSubmit)="diagnostique()" >
   <div class="modal-header">
     <h4 class="modal-title" id="modal-basic-title">Demande de consultation</h4>
     <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
@@ -31,30 +32,35 @@
 
     <!-- liste deroulante -->
     <div class="container">
-      <form class="row g-3" [formGroup]="consult" (ngSubmit)="diagnostique()" >
 
         <div class="row-mt-2">
           <div class="col-md-12">
             <label for="inputEmail4" class="form-label">Decrivez vos mal</label>
-            <input formControlName="description" type="text" class="form-control" id="inputEmail4" placeholder="Ex: Drépanocytose">
+
+            <input name="description" [(ngModel)] = "consultation.reason_consultation" type="text" class="form-control" id="inputEmail4" placeholder="Ex: Drépanocytose">
+
           </div>
         </div>
 
         <div class="row mt-4">
           <div class="col-md-12">
             <label for="inputPassword4" class="form-label">Hopital</label>
-            <select class="form-select form-select-mb " aria-label=".form-select-sm example">
-              <option selected>-Choix---</option>
-              <option value="1">santé absolue</option>
-              <option value="2">recovery</option>
-              <option value="3">ngouhan</option>
+
+            <select name="hopital" [(ngModel)] = "consultation.id_hopital" class="form-select form-select-mb " aria-label=".form-select-sm example">
+
+              <option value="0" selected>-Choix---</option>
+
+              <option *ngFor = "let hopital of hopitalList" value="{{hopital.id_hopital}}">{{hopital.hopital_name}}</option>
 
             </select>
             <label for="inputPassword4" class="form-label">Spécialité</label>
-            <select class="form-select form-select-mb " aria-label=".form-select-sm example" >
-              <option selected>-Choix---</option>
-              <option value="1">Généraliste</option>
-              <option value="2">Dermatologie et vénérologie</option>
+
+            <select name="speciality" [(ngModel)] = "consultation.id_speciality" class="form-select form-select-mb " aria-label=".form-select-sm example" >
+
+              <option value ="0" selected>-Choix---</option>
+
+              <option *ngFor ="let speciality of specialityList" value="{{speciality.id_speciality}}">{{speciality.speciality_name}}</option>
+              <!-- <option value="2">Dermatologie et vénérologie</option>
               <option value="3">Allergologie</option>
               <option value="4">L’anesthésiologie</option>
               <option value="5">L’andrologie</option>
@@ -73,17 +79,20 @@
               <option value="18">pédiatrie</option>
               <option value="19">pneumologie</option>
               <option value="20">rhumatologie</option>
-              <option value="20">urologie</option>
+              <option value="20">urologie</option> -->
             </select>
           </div>
 
           <!--  -->
           <div class="col-md-12">
             <label for="inputPassword4" class="form-label">Medecin</label>
-            <select formControlName="medecin" class="form-select form-select-mb " aria-label=".form-select-sm example" >
-              <option selected>-Choix de medecin</option>
-              <option value="1">N'GUESSAN</option>
-              <option value="2">Dr N'ZO </option>
+
+            <select name="medecin" [(ngModel)] = "consultation.id_medecin" class="form-select form-select-mb " aria-label=".form-select-sm example" >
+
+              <option value="0" selected>-Choix de medecin</option>
+
+              <option  *ngFor = "let medecin of medecinList" value="{{medecin.id_medecin}}">{{medecin.first_name + 'b'+ medecin.last_name}}</option>
+
             </select>
           </div>
           <!--  -->
@@ -92,50 +101,43 @@
         <div class="row-mt-4">
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Motif de consultation</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" name="symptoms" [(ngModel)] = "consultation.symptoms" id="exampleFormControlTextarea1" rows="3"></textarea>
           </div>
         </div> <!-- fin liste deroulante -->
 
         <!-- <div class="col-12">
             <button type="submit" class="btn btn-primary">valider</button>
           </div> -->
-      </form>
-    </div> <!-- fin div contenue dashboard-->
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-outline-info" (click)="c('Save click')">envoyer</button>
-  </div>
+        </div> <!-- fin div contenue dashboard-->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" (click)="c('Save click')">fermer</button>
+        <button type="submit" class="btn btn-primary" >envoyer</button>
+
+      </div>
+    </form>
 </ng-template>
 
 <button class="btn btn-lg btn-outline-info" (click)="open(content)">Nouvelle Consultation</button>
 
 <!--  tableau consultation -->
-<!-- <table class="table table-success table-striped">
+<table class="table table-success table-striped my-5">
   <thead>
     <tr>
       <th scope="col">Jour</th>
       <th scope="col">Hopital</th>
       <th scope="col">Medecin</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Spécialité</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+    <tr *ngFor = " let consultation of consultationList">
+      <th scope="row">{{consultation.consultation_date}}</th>
+      <td>{{consultation.id_hopital != null ? consultation.id_hopital.hopital_name : ''}}</td>
+      <td>{{consultation.id_medecin != null ? consultation.id_medecin.first_name + ' '+consultation.id_medecin.last_name: ''}}</td>
+      <td>{{consultation.id_speciality != null ? consultation.id_speciality.speciality_name : ''}}</td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+
   </tbody>
-</table>  tableau consultation -->
+</table>
+<!-- tableau consultation -->

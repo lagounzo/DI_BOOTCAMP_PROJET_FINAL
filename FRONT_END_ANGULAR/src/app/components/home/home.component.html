@@ -1,63 +1,62 @@
-
 <app-header></app-header>
 <!--  -->
 
 <ngb-carousel *ngIf="images">
-	<ng-template ngbSlide>
-		<div class="picsum-img-wrapper ">
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper ">
       <!-- <marquee > votre santé est notre priorité</marquee> -->
-			<img [src]="images[0]" alt="Random first slide " class="slide-image"  />
-		</div>
-		<div class="carousel-caption">
-      <ngx-typed-js [strings]="['MON ESPACE MEDICAL']"
-      [loop]="true"
-      [showCursor]="false"
-      [typeSpeed]="90"
-      [backSpeed]="40"
-      [backDelay]="2000">
+      <img [src]="images[0]" alt="Random first slide " class="slide-image" />
+    </div>
+    <div class="carousel-caption">
+      <ngx-typed-js [strings]="['MON ESPACE MEDICAL']" [loop]="true" [showCursor]="false" [typeSpeed]="90"
+        [backSpeed]="40" [backDelay]="2000">
         <h3 class="typing"></h3>
       </ngx-typed-js>
 
-			<p>Mon espace Médical est un service numérique de confiance, qui permet aux utilisateurs d'avoir à portée de main leur carnet de santé numerique et informations utiles pour leur santé. ce nouveau service
-        qui garantit vous  usagers la protection de leurs données de santé et la préservation du secret médical.
+      <p class ="couleurPar">Mon espace Médical est un service numérique de confiance, qui permet aux utilisateurs d'avoir à portée de main
+        leur carnet de santé numerique et informations utiles pour leur santé. ce nouveau service
+        qui garantit vous usagers la protection de leurs données de santé et la préservation du secret médical.
       </p>
 
-		</div>
-	</ng-template>
-	<ng-template ngbSlide>
-		<div class="picsum-img-wrapper">
-			<img [src]="images[1]" alt="Random second slide" class="slide-image" />
-		</div>
-		<div class="carousel-caption">
-			<h3>Pour vous servir</h3>
-			<p>Faite nous confiance.</p>
-		</div>
-	</ng-template>
-	<ng-template ngbSlide>
-		<div class="picsum-img-wrapper">
-			<img [src]="images[2]" alt="Random third slide" class="slide-image" />
-		</div>
-		<div class="carousel-caption">
-      <h1>MON ESPACE MEDICAL.</h1>
-      <p class="para">Mon espace Médical est un service numérique de confiance, qui permet aux utilisateurs d'avoir à portée de main leur carnet de santé numerique et informations utiles pour leur santé. ce nouveau service
-        qui garantit vous  usagers la protection de leurs données de santé et la préservation du secret médical.</p>
-      </div>
-	</ng-template>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[1]" alt="Random second slide" class="slide-image" />
+    </div>
+    <div class="carousel-caption">
+      <h3>Pour vous servir</h3>
+      <p class="black">Faite nous confiance.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[2]" alt="Random third slide" class="slide-image" />
+    </div>
+    <div class="carousel-caption couleurPar">
+      <h1 class="black">MON ESPACE MEDICAL.</h1>
+      <p class="couleurPar1">Mon espace Médical est un service numérique de confiance, qui permet aux utilisateurs d'avoir à
+        portée de main leur carnet de santé numerique et informations utiles pour leur santé. ce nouveau service
+        qui garantit vous usagers la protection de leurs données de santé et la préservation du secret médical.</p>
+    </div>
+  </ng-template>
 </ngb-carousel>
 <!-- fin banierer -->
 
 <!--  -->
 <section class="py-5 text-center container">
-  <div class="defilement" >
-  <marquee><b>Votre santé est notre prioritée </b></marquee>
+  <div class="defilement">
+    <marquee><b>Votre santé est notre prioritée </b></marquee>
   </div>
   <div class="row py-lg-5">
     <div class="col-lg-6 col-md-8 mx-auto">
       <h1 class="fw-light">PRESENTATION</h1>
       <hr class="hr1">
       <p> <b>MON ESPACE MEDICAL</b> est un espace numérique qui vous permet d'avoir votre <br>
-        carnet de santé numérique  <br>tout en ayant à portée de main, en tout lieu vos informations médicales,
-         il vous permettra d'effectuer des prises de rendez-vous tout en envoyant aux médecins une descriptions de votre mal, par la suite, vous pourrez utiliser une ordonnance numérique dans toutes les pharmacies connectée à l'application tout en utilisant votre carte d'assurance-maladie.</p>
+        carnet de santé numérique <br>tout en ayant à portée de main, en tout lieu vos informations médicales,
+        il vous permettra d'effectuer des prises de rendez-vous tout en envoyant aux médecins une descriptions de votre
+        mal, par la suite, vous pourrez utiliser une ordonnance numérique dans toutes les pharmacies connectée à
+        l'application tout en utilisant votre carte d'assurance-maladie.</p>
     </div>
   </div>
 </section>
@@ -65,129 +64,84 @@
 
 
 
-  <!-- Wrap the rest of the page in another container to center all the content. -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
 
-  <div class="container-fluid marketing-">
+<div class="container-fluid marketing-">
 
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
-      <div class="col-md-1">
-
-      </div>
-
-      <div class="col-md-3 ">
-        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/assets/imag/avantage .jpg">
-        <h2 class="fw-normal">Avantage</h2>
-        <p>
-          Il permet d’avoir en tout lieu et à porté de main tous vos document relatif  votre bien-etre:
-          les ordonnances médicales, les résultats d’analyses faites en laboratoire, proposition de pharmacie autoriser aux ordonnaces numeriques
-         l’historique de vos frais medical, les comptes-rendus d’hospitalisation, facilitation d'optension de poche de sang */
-
-        </p>
-        <p><a class="btn btn-secondary" href="#">En savoir plus &raquo;</a></p>
-      </div>
-      <!-- /.col-lg-4 -->
-      <div class="col-md-3 me-1">
-        <img class="bd-placeholder-img rounded-circle" width="140" height="140" >
-        <h2 class="fw-normal">Sécurité</h2>
-        <p>Toutes les précautions utiles sont prises pour assurer la sécurité et la confidentialité de vos données personnelles,
-          notamment pour empêcher leur perte, altération, destruction ou utilisation par des tiers non autorisés  </p>
-        <p><a class="btn btn-secondary" href="#">En savoir plus &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-md-3">
-        <img class="bd-placeholder-img rounded-circle" width="140" height="140" >
-        <h2 class="fw-normal">Heading</h2>
-        <p>And lastly this, the third column of representative placeholder content.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div>
-      <div class="col-md-1">
-
-      </div>
-
-      <!-- /.col-lg-4 -->
-    </div><!-- /.row -->
+  <!-- Three columns of text below the carousel -->
+  <div class="row px-5 d-flex justify-content-evenly">
 
 
-    <!-- START THE FEATURETTES -->
+    <div class="col-md-3 me-1 ">
+      <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/assets/imag/avantage .jpg">
+      <h2 class="fw-normal">Avantage</h2>
+      <p>
+        Il permet d’avoir en tout lieu et à porté de main tous vos document relatif votre bien-etre:
+        les ordonnances médicales, les résultats d’analyses faites en laboratoire, proposition de pharmacie autoriser
+        aux ordonnaces numeriques
+        l’historique de vos frais medical, les comptes-rendus d’hospitalisation, facilitation d'optension de poche de
+        sang */
 
-    <!-- <hr class="featurette-divider"> -->
-
-    <!-- <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
-      </div>
-      <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-      </div>
-    </div> -->
-
-    <!-- <hr class="featurette-divider"> -->
-
-    <!-- <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
-      </div>
-      <div class="col-md-5 order-md-1">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-      </div>
-    </div> -->
-
-    <!-- <hr class="featurette-divider"> -->
-
-    <!-- <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
-      </div>
-      <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-      </div>
-    </div> -->
-
-    <!-- <hr class="featurette-divider"> -->
-
-    <!-- /END THE FEATURETTES -->
-
-  </div><!-- /.container -->
-
-
-  <!-- FOOTER -->
-
-  <div class="row col-md-12">
-  <div class="card" style="width: 19rem;">
-    <div class="card-body">
-      <h6 class="card-subtitle mb-2 text-muted">pourquoi mon espace medical</h6>
-      <p class="card-text"> Notre solution aborde les problemeatiques suivantes </p>
-    <ul>
-      <li>Carnet numerique </li>
-      <li>Suivre l'evoluion de votre parcour medical </li>
-      <li>Suivre l'evolution de vaux maladies par la mise en place d'un rapport statistique  </li>
-      <li>Fournir des mises à jour fiables aux autorités de santé publique;
-        <li>Acces facile aux service lié à la santé </li>
-      <li>Facture numerique </li>
-
-    </ul>
+      </p>
+      <p><a class="btn btn-secondary" href="#">En savoir plus &raquo;</a></p>
     </div>
-  </div>
-  <!--  -->
-  <div class="card" style="width: 19rem;">
-    <div class="card-body">
-      <h6 class="card-subtitle mb-2 text-muted">Fonctionnalite</h6>
-      <p class="card-text"> </p>
-    <ul>
-      <li>Sensibilisation sur les maladie infectueuse </li>
-      <li>
-        Profil Médical (Groupe Sanguin, Personnes à contacter, Allergies, Vaccins, Antecedent etc.)
-     </li>
-      <li> Ordonnance numerique associer avec votre carte d'assurance  </li>
-      <li>Fournir des mises à jour fiables aux autorités de santé publique</li>
-      <li>Acces facile aux service lié à la santé </li>
-      <li>Facture numerique </li>
+    <!-- /.col-lg-4 -->
+    <div class="col-md-3 me-1">
+      <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/assets/imag/safe.jpg">
+      <h2 class="fw-normal">Sécurité</h2>
+      <p>Toutes les précautions utiles sont prises pour assurer la sécurité et la confidentialité de vos données
+        personnelles,
+        notamment pour empêcher leur perte, altération, destruction ou utilisation par des tiers non autorisés </p>
+      <p><a class="btn btn-secondary" href="#">En savoir plus &raquo;</a></p>
+    </div><!-- /.col-lg-4 -->
 
-    </ul>
+
+
+    <!-- /.col-lg-4 -->
+  </div><!-- /.row -->
+
+
+
+</div><!-- /.container -->
+
+
+<!--  -->
+<div class="div row ">
+  <div class="row col-md-12 d-flex justify-content-evenly">
+    <div class="card" style="width: 19rem;">
+      <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted">pourquoi mon espace medical</h6>
+        <p class="card-text"> Notre solution aborde les problemeatiques suivantes </p>
+        <ul>
+          <li>Carnet numerique </li>
+          <li>Suivre l'evoluion de votre parcour medical </li>
+          <li>Suivre l'evolution de vaux maladies par la mise en place d'un rapport statistique </li>
+          <li>Fournir des mises à jour fiables aux autorités de santé publique;
+          <li>Acces facile aux service lié à la santé </li>
+          <li>Facture numerique </li>
+
+        </ul>
+      </div>
     </div>
+    <!--  -->
+    <div class="card" style="width: 19rem;">
+      <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted">Fonctionnalite</h6>
+        <p class="card-text"> </p>
+        <ul>
+          <li>Sensibilisation sur les maladie infectueuse </li>
+          <li>
+            Profil Médical (Groupe Sanguin, Personnes à contacter, Allergies, Vaccins, Antecedent etc.)
+          </li>
+          <li> Ordonnance numerique associer avec votre carte d'assurance </li>
+          <li>Fournir des mises à jour fiables aux autorités de santé publique</li>
+          <li>Acces facile aux service lié à la santé </li>
+          <li>Facture numerique </li>
+
+        </ul>
+      </div>
+    </div>
+
   </div>
   <!--  -->
 
@@ -198,6 +152,8 @@
 
 
 
-  <app-footer></app-footer>
+
+
+<app-footer></app-footer>
 
 <!-- *********** -->

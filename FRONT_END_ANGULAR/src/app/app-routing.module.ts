@@ -6,6 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { AjouterComponent } from './components/medecin/ajouter/ajouter.component';
 import { AntecedentComponent } from './components/patient/antecedent/antecedent.component';
+import { ConstanteComponent } from './components/patient/constante/constante.component';
 import { ConsultationComponent } from './components/patient/consultation/consultation.component';
 import { InformationPersonnelleComponent } from './components/patient/information-personnelle/information-personnelle.component';
 import { PlayoutComponent } from './components/patient/playout/playout.component';
@@ -48,6 +49,9 @@ const routes: Routes = [
       {
         path: "informationPersonnelle", component: InformationPersonnelleComponent
       },
+      {
+        path: "consultation", component: ConsultationComponent
+      },
 
       {
         path:"antecedent", component : AntecedentComponent
@@ -60,6 +64,9 @@ const routes: Routes = [
       },
       {
         path:"specialiteHopitalDr", component : SpecialiteHopitalDrComponent
+      },
+      {
+        path:"constante", component : ConstanteComponent
       }
 
     ]

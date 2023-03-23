@@ -7,53 +7,56 @@
 <!-- modelisation ordonnance -->
 <div class="container">
 
-  <form class="row g-3">
-    <div class="row-mt-2">
+  <form class="row g-3" #form="ngForm" (ngSubmit)="ordonnance()">
+    <!-- <div class="row-mt-2">
       <div class="col-md-12">
         <label for="inputEmail4" class="form-label">N° ordonnance</label>
         <input type="email" class="form-control" id="inputEmail4" placeholder="">
       </div>
-    </div>
+    </div> -->
 
-    <div class="row-mt-2">
+    <!-- <div class="row-mt-2">
       <div class="col-md-12">
         <label for="inputEmail4" class="form-label">Nom</label>
         <input type="email" class="form-control" id="inputEmail4" placeholder="">
       </div>
-    </div>
-    <div class="row-mt-2">
-      <div class="col-md-12">
-        <label for="inputEmail4" class="form-label">Prenom</label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="">
-      </div>
-    </div>
-
+    </div> -->
     <div class="row mt-4"> <!--medicament start-->
       <div class="col-md-12">
-        <label for="inputPassword4" class="form-label">Médicament</label>
-        <select class="form-select form-select-mb " aria-label=".form-select-sm example">
-          <option selected>-Sélectionnez le medicament</option>
-          <option value="1">paracetamol</option>
-          <option value="2">para</option>
-          <option value="3">ca-c1000</option>
+        <label for="inputPassword4" class="form-label">consultation</label>
+
+        <select name="consultation" [(ngModel)] = "prescription.consultation.id_consultation" class="form-select form-select-mb " aria-label=".form-select-sm example">
+
+          <option selected>-Sélectionnez--</option>
+
+          <option *ngFor ="let consultation of consultationList"  value="{{consultation.id_consultation}}">{{consultation.reason_consultation}}</option>
 
         </select>
       </div>
 
     </div> <!--fin medicament-->
+    <div class="row-mt-2">
+      <div class="col-md-12">
+        <label for="inputEmail4" class="form-label">medicament</label>
+
+        <input name ="prescribed_medication" [(ngModel)] = "prescription.prescribed_medication" type="text" class="form-control" id="inputEmail4" placeholder="">
+
+      </div>
+    </div>
+
     <!--  -->
     <!-- check box posologie -->
-    <div class="row-mt-4" routerLink="./prescription">
+    <div class="row-mt-4">
       <div class="col-md-12">
         <label for="inputPassword4" class="form-label">Posologie</label>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <input class="form-check-input" type="radio" name="posologie" value="1 matin midi soir" [(ngModel)] = "prescription.dosage" id="flexRadioDefault1">
           <label class="form-check-label" for="flexRadioDefault1">
             1 matin midi soir
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+          <input class="form-check-input" type="radio" name="posologie" value="1 par jour" [(ngModel)] = "prescription.dosage" id="flexRadioDefault2" checked>
           <label class="form-check-label" for="flexRadioDefault2">
             1 par jour
           </label>
@@ -64,7 +67,8 @@
     <div class="row-mt-4">
       <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">Observation</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="observaton"
+        [(ngModel)] = "prescription.duration_treatment" rows="3"></textarea>
       </div>
     </div>
     <div class="col-12">

@@ -11,7 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PatientComponent } from './components/patient/patient.component';
 import { PrescriptionComponent } from './components/patient/prescription/prescription.component';
 import { PlayoutComponent } from './components/patient/playout/playout.component';
@@ -65,6 +65,7 @@ import {NgxTypedJsModule} from 'ngx-typed-js';
       TuiDialogModule,
       TuiAlertModule,
       HttpClientModule, // impoter pour l api
+      FormsModule,
 
 ],
   providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}],

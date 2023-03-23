@@ -6,10 +6,15 @@
 <section class="py-5 text-center container">
   <div class="row py-lg-5">
     <div class="col-lg-6 col-md-8 mx-auto">
-      <h1 class="fw-light">BIENVENUE</h1>
-      <p class="lead text-muted"> Voulez-vous consulter un specialiste ? veuillez selection une specialité en prenant un rendez-vous</p>
+      <h1 class="fw-light">
+        <ngx-typed-js [strings]="['BIENVENUE']" [loop]="true" [showCursor]="false" [typeSpeed]="100"
+        [backSpeed]="100" [backDelay]="5000">
+        <h3 class="typing"></h3>
+      </ngx-typed-js>
+      </h1>
+      <p class="lead  "> Voulez-vous consulter un spécialiste ? Veuillez sélectionner une spécialité en prenant un rendez-vous.</p>
       <p>
-        <a href="#" class="btn btn-primary my-4">rendez-vous</a>
+        <a href="#" class="btn btnprimary my-4 mx-3">rendez-vous</a>
         <a href="#" class="btn btn-secondary my-4">Tarif consultation</a>
       </p>
     </div>
@@ -23,7 +28,7 @@
   <div class="col-8">
 
       <img src="/assets/imag/specialites.png">
-   
+
   </div>
   <div class="col-2">
 
@@ -31,37 +36,58 @@
 </div> -->
 
 <!-- enumeration des specialité -->
-<!-- 
-  
+<!--
+
  -->
 
-<div class="row" >
-  <div class="col-4">
-    <div class="card" style="width: 18rem; display: flex; justify-content: center;">
-      <div class="card-body">
-        <h5 class="card-title">Généraliste</h5>
+<div class="row d-flex justify-content-evenly" >
+  <div class="col-4  ">
+    <div class="card my-2 m-auto cardspeciality" style="width: 18rem; display: flex; justify-content: center;">
+      <div class="card-body ">
+        <h5 class="card-title text-center">Généraliste</h5>
       </div>
     </div>
   </div>
-  <div class="col-4">
-    <div class="card" style="width: 18rem; display: flex; justify-content: center;">
+  <div class="col-4 ">
+    <div class="card my-2 m-auto cardspeciality" style="width: 18rem; display: flex; justify-content: center;">
       <div class="card-body">
-        <h5 class="card-title">Dermatologie</h5>
+        <h5 class="card-title text-center">Dermatologie</h5>
       </div>
     </div>
   </div>
-  <div class="col-4">
-    <div class="card" style="width: 18rem; display: flex; justify-content: center;">
+  <div class="col-4 ">
+    <div class="card my-2 m-auto cardspeciality" style="width: 18rem; display: flex; justify-content: center;">
       <div class="card-body">
-        <h5 class="card-title">Diétéique</h5>
+        <h5 class="card-title text-center">Diétéique</h5>
       </div>
     </div>
   </div>
-  
+  <div class="col-4 ">
+    <div class="card my-2 m-auto cardspeciality" style="width: 18rem; display: flex; justify-content: center;">
+      <div class="card-body ">
+        <h5 class="card-title text-center">Dermatologie et vénérologie</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col-4 ">
+    <div class="card my-2 m-auto cardspeciality" style="width: 18rem; display: flex; justify-content: center;">
+      <div class="card-body">
+        <h5 class="card-title text-center">cardiologie</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col-4 ">
+    <div class="card my-2 m-auto cardspeciality" style="width: 18rem; display: flex; justify-content: center;">
+      <div class="card-body">
+        <h5 class="card-title text-center">ophtalmologie</h5>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 
 
 <!-- FOOTER -->
-  
+
 <app-footer></app-footer>

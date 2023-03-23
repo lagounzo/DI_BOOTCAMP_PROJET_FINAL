@@ -24,33 +24,37 @@ export class LoginComponent implements OnInit{
   }
 // la fontion retourne l'alert d'envoie
   logIn(){
-    console.log(this.login.value)
-    if (!this.login.valid){
-      return alert("veuillez saisir vos identifiants")
-    }
-    this.LoginService.setLogin({
-      data : this.login.value,
-      endpoint: "commtUsers/login"
+    // console.log(this.login.value)
+    // if (!this.login.valid){
+    //   return alert("veuillez saisir vos identifiants")
+    // }
+    // this.LoginService.setLogin({
+    //   data : this.login.value,
+    //   endpoint: "commtUsers/login"
 
 
-    }).subscribe({
-      next:(response :any) => {
-        console.log(response)
-      },
-      error:(error :any) => {
-        console.log(error)
-      }
-    })
+    // }).subscribe({
+    //   next:(response :any) => {
+    //     console.log(response)
+    //   },
+    //   error:(error :any) => {
+    //     console.log(error)
+    //   }
+    // })
 
 
 
-    if(this.login.invalid){
-      alert("Error");
-    }else{
-      alert("Succes");
-    }
+    // if(this.login.invalid){
+    //   alert("Error");
+    // }else{
+    //   alert("Succes");
+    // }
     console.log(this.login)
+
+    this.router.navigate(['/playout/informationPersonnelle']);
+
   }
+
   //resgter
 
   register(){

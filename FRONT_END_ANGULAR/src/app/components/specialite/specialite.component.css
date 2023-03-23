@@ -3,3 +3,27 @@
   height: 90vh;
   justify-content: center;
 } */
+
+.cardspeciality:hover {
+  box-shadow: 0 20px 60px 0 rgba(0,0,0,.4);
+  -webkit-transform: translate(0,-10px);
+  transform: translate(0,-10px);
+  background-color: green;
+}
+
+  [class*=cardspeciality]{
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+/* btn resersation */
+
+.btnprimary{
+  background-color:  hsl( 45  95% 62% );
+}
+
+.couleurPar
+{
+  color: hsl( 45  95% 62% );
+    font-size: 15px;
+}
